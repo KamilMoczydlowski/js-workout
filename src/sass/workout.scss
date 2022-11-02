@@ -16,7 +16,8 @@
 body {
     position: relative;
     font-family: 'Rubik', sans-serif;
-    background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+    color: $text1-color;
+    background-color: $primary-bgc;
     min-height: 100vh;
 }
 
@@ -27,7 +28,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(90deg, #8baaaa 0%, #ae8b9c 100%);
+    background-image: linear-gradient(90deg, #888C8E 0%, #192225 100%);
 }
 
 .help-title {
@@ -46,6 +47,10 @@ body {
     padding-left: 1.5em;
     padding-right: .5em;
     font-size: 2rem;
+}
+
+.help-list {
+    margin: 0 auto;
 }
 
 .container {
@@ -71,7 +76,7 @@ body {
     a:link,
     a:active,
     a:visited {
-        color: black;
+        color: $third-color;
         text-decoration: none;
     }
 }
@@ -79,6 +84,7 @@ body {
 .questionmark {
     height: 3.5rem;
     width: 3.5rem;
+    color: $third-color;
     background: none;
     border: none;
     cursor: pointer;
@@ -116,8 +122,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(90deg, #8baaaa 0%, #ae8b9c 100%);
+    background-image: linear-gradient(90deg, #888C8E 0%, #192225 100%);
     border: 1px solid black;
+    border-radius: 20px;
     transform: translate(-50%, -50%);
 }
 
@@ -164,7 +171,7 @@ body {
     height: 3.5rem;
     width: 90%;
     font-size: 2rem;
-    border: 2px solid black;
+    border: 2px solid $third-color;
     border-radius: 30px;
 
     .weather-icon-box {
@@ -186,6 +193,7 @@ body {
 .city-name {
     width: 100%;
     font-size: 2rem;
+    color: $text1-color;
     background: none;
     border: none;
     cursor: pointer;
@@ -196,6 +204,10 @@ body {
     margin: 1em auto 0;
     font-size: 1.5rem;
     text-align: center;
+}
+
+.weather-info {
+    color: $third-color;
 }
 
 .weather-error {
@@ -223,7 +235,7 @@ body {
     width: 100%;
     font-size: 1.5rem;
     text-align: left;
-    background-color: #ddd;
+    background-color: $secondary-color;
     border: none;
     border-radius: 6px;
 
@@ -240,7 +252,7 @@ body {
     display: none;
     padding: 1em 1em;
     width: 100%;
-    background-color: #eee;
+    background-color: $third-color;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -248,6 +260,7 @@ body {
 .daily-results {
     display: flex;
     justify-content: space-between;
+    color: $primary-bgc;
 }
 
 .acc-list-item,
@@ -266,8 +279,9 @@ body {
     margin: 1em auto 0;
     width: 15rem;
     height: 3.5rem;
+    background-color: $secondary-color;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid $third-color;
 
     a,
     a:link,
@@ -293,7 +307,7 @@ body {
 .stoper-box {
     margin-bottom: 2rem;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid $third-color;
     border-radius: 10px;
 }
 
@@ -320,6 +334,7 @@ body {
     height: 50px;
     margin: 0 1.5rem;
     font-size: 1.7rem;
+    background-color: $secondary-color;
     border: 1px solid black;
     border-radius: 15px;
     cursor: pointer;
@@ -335,6 +350,10 @@ body {
 
 .stoper-err {
     color: red;
+}
+
+.quote-text {
+    color: $third-color;
 }
 
 .quote-text,
@@ -370,6 +389,7 @@ body {
     justify-content: space-around;
     width: 100%;
     font-size: 1.5rem;
+    color: $third-color;
 }
 
 .old-result-time-list,
@@ -399,7 +419,8 @@ body {
     width: 6.5em;
     height: 4em;
     font-size: 2rem;
-    border: 1px solid black;
+    background-color: $secondary-color;
+    border: 1px solid $third-color;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -414,13 +435,27 @@ body {
     background-color: rgb(0, 255, 0);
 }
 
+@media (min-width: 992px) {
+    .help-list {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
 @media (min-width: 1200px) {
     .wrapper {
         width: 80%;
     }
 
     .acc-btn {
+        margin: 0 auto;
         transition: background-color .3s;
         cursor: pointer;
+        width: 60%;
+    }
+
+    .acc-info {
+        margin: 0 auto;
+        width: 60%;
     }
 }
